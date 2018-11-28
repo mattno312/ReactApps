@@ -1,0 +1,71 @@
+.App {
+	background-image: url('./media/corners.jpg');
+	background-size: cover;
+	text-align: center;
+}
+a:hover {
+}
+
+.App-logo {
+	transform: scale(0.5) scaleZ(1) rotateX(49deg) rotateY(9deg) rotateZ(49deg) translateZ(114px);
+	perspective: 2000;
+	perspective-origin: 0% 50%;
+	margin: 30px;
+	padding: 1px;
+	border-top: 0.3em solid #222222;
+	border-bottom: 0.3em solid #222222;
+	border-radius: 50% / 25%;
+	max-width: 66%;
+}
+
+.App-logo:hover {
+	transform: scale(0.7) scaleZ(1) rotateX(12deg) rotateY(35deg) rotateZ(-6deg);
+	perspective: 2000;
+	perspective-origin: 0% 50%;
+	border-radius: 50% / 25%;
+}
+
+.App-header {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'palatino linotype', palatino, serif;
+	font-size: 20px;
+	font-variant: small-caps;
+	text-align: center;
+	letter-spacing: 5pt;
+	word-spacing: -6.2pt;
+	line-height: 4;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.morph {
+	height: 100px;
+	width: 150px;
+	border-radius: 6%;
+	margin: 0 auto;
+	background-color: none;
+	animation-name: stretch;
+	animation-duration: 0.9s;
+	animation-timing-function: ease-out;
+	animation-delay: 0;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+	animation-play-state: running;
+}
+
+@keyframes stretch {
+	0% {
+		border-radius: 100;
+		transform: scale(0.2) scaleZ(0.7) rotateX(7deg) rotateY(7deg) rotateZ(77deg) translateZ(14px);
+	}
+
+	100% {
+		transform: scale(1.5) scaleZ(0.6) rotateX(100deg) rotateY(18deg) rotateZ(66deg)
+			translateZ(200px) skew(40deg, 40deg);
+	}
+}
